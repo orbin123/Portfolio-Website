@@ -107,10 +107,12 @@
     }
 
     .contact-left{
-      width: 70vh;
+      width: 60vh;
       align-items: center;
       margin-bottom: 30px;
     }
+    
+    
 
     
   }

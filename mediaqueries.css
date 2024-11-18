@@ -42,7 +42,7 @@
 
     .section__pic-container{
         width: 275px;
-        height: 275;
+        height: 275px;
         margin: 0 auto 2rem;
     }
 
@@ -107,9 +107,13 @@
     }
 
     .contact-left{
-      width: 55vh;
       align-items: center;
       margin-bottom: 30px;
+    }
+    .contact-inputs{
+      
+      width: 300px;
+      
     }
 
   }

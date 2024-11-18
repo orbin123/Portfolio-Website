@@ -64,32 +64,7 @@ document.getElementById("enquiryForm").addEventListener("submit", function (e) {
 
   // If form is valid, submit or show success (for demonstration purposes)
   if (isValid) {
-    // Prepare email content
-    const emailContent = `
-      <strong>Name:</strong> ${nameInput.value.trim()}<br>
-      <strong>Email:</strong> ${emailInput.value.trim()}<br>
-      <strong>Message:</strong><br>${messageInput.value.trim()}
-    `;
-
-    // Use SMTP.js to send email
-    Email.send({
-      Host: "smtp.elasticemail.com",
-      Username: "orbinsunny@gmail.com",
-      Password: "E0E06B711EC7DF1E015A96C9294F8A497584", // Replace with your SMTP.js secure token
-      To: "orbinsunny@gmail.com", // Replace with your email address
-      From: emailInput.value.trim(), // Sender's email
-      Subject: "New Enquiry from Portfolio Website",
-      Body: emailContent,
-    }).then((message) => {
-      console.log(message);
-      if (message === "OK") {
-        alert("Your message has been sent successfully!");
-        document.getElementById("enquiryForm").reset(); // Reset the form
-      } else {
-        alert("Failed to send your message. Please try again later.");
-        alert(message);
-        document.getElementById("enquiryForm").reset();
-      }
-    });
+    this.submit();
+    this.reset();
   }
 });
